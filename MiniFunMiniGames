@@ -5,8 +5,8 @@ import random
 
 mathscore = 0
 #I believe you know what the mathscore variable is for.
-x = random.randint(1, 25)
-y = random.randint(1, 25)
+x = random.randint(1, 100)
+y = random.randint(1, 100)
 #These variables are for the math quiz, where x and y generate two random numbers between 1 and 25.
 
 print("Hello! Introducing MiniFunMiniGames, where I can test your knowledge and ability. Type your name to continue!")
@@ -14,6 +14,8 @@ input_name = input("Enter your name: ")
 #Using input(), I got the user's name and stored it in the variable 'input_name'.
 print("Welcome, "+input_name+"! Since your here, why don't we play some games?")
 #This is where I used 'input_name' to greet the user.
+
+#--------------------------------Let's start with a math quiz!-------------------------------------------
 
 print("Let's start with a simple math quiz! I'll ask you 5 questions, and you can try to answer them.")
 print("Question 1: What is " + str(x) + " + " + str(y) + "?")
@@ -78,3 +80,40 @@ else:
     print("Oops! The correct answer is " + str(x * y / 100) + ". You're doing great, keep it up!")
     print("Your final score is: " + str(mathscore))
 #This is the final question, where I used percentage calculation with random numbers between 1 and 100.
+print("Thanks for playing The Math Quiz, " + input_name + "! Your final score is: " + str(mathscore) + "/5")
+print("You got a " + str((mathscore/5)*100) + "% on the quiz!")
+
+#---------------------------------End of the math quiz--------------------------------------------
+#-----------------------------Start of Rock, Paper, Scissors--------------------------------------
+
+i = 0
+while i <= 5:
+    print("Now, let's play 5 rounds of Rock, Paper, Scissors! Type 'rock', 'paper', or 'scissors' to play.")
+    choices = ["rock", "paper", "scissors"]
+    while True:
+        user_choice = input("Your choice: ").lower()
+        if user_choice not in choices:
+            print("Invalid choice! Please choose 'rock', 'paper', or 'scissors'.")
+            continue
+    
+        computer_choice = random.choice(choices)
+        print("I chose:", computer_choice)
+
+        if user_choice == computer_choice:
+            print("It's a tie!")
+        elif (user_choice == "rock" and computer_choice == "scissors") or \
+            (user_choice == "paper" and computer_choice == "rock") or \
+            (user_choice == "scissors" and computer_choice == "paper"):
+            print("You win!")
+        else:
+            print("You lose!")
+
+        i += 1
+        if i >= 5:
+            print("Game over! You played 5 rounds.")
+            
+
+#---------------------------------End of Rock, Paper, Scissors--------------------------------------
+#---------------------------------Start of a simple trivia game--------------------------------------
+
+print("bob :D")
