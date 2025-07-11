@@ -1,0 +1,80 @@
+#MiniFunMiniGames
+
+import random
+#This import allows us to generate random numbers for the quiz.
+
+mathscore = 0
+#I believe you know what the mathscore variable is for.
+x = random.randint(1, 25)
+y = random.randint(1, 25)
+#These variables are for the math quiz, where x and y generate two random numbers between 1 and 25.
+
+print("Hello! Introducing MiniFunMiniGames, where I can test your knowledge and ability. Type your name to continue!")
+input_name = input("Enter your name: ")
+#Using input(), I got the user's name and stored it in the variable 'input_name'.
+print("Welcome, "+input_name+"! Since your here, why don't we play some games?")
+#This is where I used 'input_name' to greet the user.
+
+print("Let's start with a simple math quiz! I'll ask you 5 questions, and you can try to answer them.")
+print("Question 1: What is " + str(x) + " + " + str(y) + "?")
+#This is where I used the variables x and y to create a math question for the user.
+answer1 = input("Your answer: ")
+#Here, I used input() to get the user's answer and stored it in the variable 'answer1'.
+if int(answer1) == (x + y):
+    print("Correct! Well done, " + input_name + "!")
+    mathscore += 1
+    print("Your current score is: " + str(mathscore))
+else:
+    print("Oops! The correct answer is " + str(x + y) + ". Don't worry, let's try another one!")
+    print("Your current score is: " + str(mathscore))
+#I used an if statement to check if the user's answer is correct. 
+#If it is, I congratulate them and increase their score by 1. 
+#If not, I tell them the correct answer and keep their score the same.
+x = random.randint(25, 50)
+y = random.randint(1, 25)
+print("Question 2: What is " + str(x) + " - " + str(y) + "?")
+answer2 = input("Your answer: ")
+if int(answer2) == (x - y):
+    print("Correct! Great job, " + input_name + "!")
+    mathscore += 1
+    print("Your current score is: " + str(mathscore))
+else:
+    print("Oops! The correct answer is " + str(x - y) + ". Keep trying, you're doing great!")
+    print("Your current score is: " + str(mathscore))
+#I used the same structure for the second question, but this time I used subtraction.
+x = random.randint(1, 10)
+y = random.randint(1, 10)
+print("Question 3: What is " + str(x) + " * " + str(y) + "?")
+answer3 = input("Your answer: ")
+if int(answer3) == (x * y):
+    print("Correct! Awesome, " + input_name + "!")
+    mathscore += 1
+    print("Your current score is: " + str(mathscore))
+else:
+    print("Oops! The correct answer is " + str(x * y) + ". You're doing great, keep it up!")
+    print("Your current score is: " + str(mathscore))
+#For the third question, I used multiplication with random numbers between 1 and 10.
+x = random.randint(1, 20)
+y = random.randint(1, 20)
+print("Question 4: What is " + str(x) + " / " + str(y) + "? Write your answer as a decimal and round to the ones place.")
+answer4 = input("Your answer: ")
+if round(float(answer4)) == round(x / y):
+    print("Correct! Awesome, " + input_name + "!")
+    mathscore += 1
+    print("Your current score is: " + str(mathscore))
+else:
+    print("Oops! The correct answer is " + str(x / y) + ". You're doing great, keep it up!")
+    print("Your current score is: " + str(mathscore))
+#For the fourth question, I used division with random numbers between 1 and 20.
+x = random.randint(1, 100)
+y = random.randint(1, 100)
+print("Question 5: What is " + str(x) + " percent of " + str(y) + "? Write your answer as a decimal and round to the ones place.")
+answer5 = input("Your answer: ")
+if round(float(answer5)) == round(x * y / 100):
+    print("Correct! Awesome, " + input_name + "!")
+    mathscore += 1
+    print("Your final score is: " + str(mathscore))
+else:
+    print("Oops! The correct answer is " + str(x * y / 100) + ". You're doing great, keep it up!")
+    print("Your final score is: " + str(mathscore))
+#This is the final question, where I used percentage calculation with random numbers between 1 and 100.

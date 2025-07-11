@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans:wght@600&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <title>
+            Nidheesh & Rohit Games
+        </title>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+        <h1>
+            Welcome to Nidheesh & Rohit Games!
+        </h1>
+        <p>
+            Here you can play some fun mini-games created by Nidheesh and Rohit.
+        </p>
+        <ul>
+            
+        </ul>
+    </body>
+</html>
