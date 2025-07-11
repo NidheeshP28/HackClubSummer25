@@ -13,6 +13,7 @@ print("Hello! Introducing MiniFunMiniGames, where I can test your knowledge and 
 input_name = input("Enter your name: ")
 #Using input(), I got the user's name and stored it in the variable 'input_name'.
 print("Welcome, "+input_name+"! Since your here, why don't we play some games?")
+print("-" * 30)
 #This is where I used 'input_name' to greet the user.
 
 #--------------------------------Let's start with a math quiz!-------------------------------------------
@@ -26,9 +27,11 @@ if int(answer1) == (x + y):
     print("Correct! Well done, " + input_name + "!")
     mathscore += 1
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 else:
     print("Oops! The correct answer is " + str(x + y) + ". Don't worry, let's try another one!")
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 #I used an if statement to check if the user's answer is correct. 
 #If it is, I congratulate them and increase their score by 1. 
 #If not, I tell them the correct answer and keep their score the same.
@@ -40,9 +43,11 @@ if int(answer2) == (x - y):
     print("Correct! Great job, " + input_name + "!")
     mathscore += 1
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 else:
     print("Oops! The correct answer is " + str(x - y) + ". Keep trying, you're doing great!")
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 #I used the same structure for the second question, but this time I used subtraction.
 x = random.randint(1, 10)
 y = random.randint(1, 10)
@@ -52,9 +57,11 @@ if int(answer3) == (x * y):
     print("Correct! Awesome, " + input_name + "!")
     mathscore += 1
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 else:
     print("Oops! The correct answer is " + str(x * y) + ". You're doing great, keep it up!")
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 #For the third question, I used multiplication with random numbers between 1 and 10.
 x = random.randint(1, 20)
 y = random.randint(1, 20)
@@ -64,9 +71,11 @@ if round(float(answer4)) == round(x / y):
     print("Correct! Awesome, " + input_name + "!")
     mathscore += 1
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 else:
     print("Oops! The correct answer is " + str(x / y) + ". You're doing great, keep it up!")
     print("Your current score is: " + str(mathscore))
+    print("-" * 30)
 #For the fourth question, I used division with random numbers between 1 and 20.
 x = random.randint(1, 100)
 y = random.randint(1, 100)
@@ -76,41 +85,55 @@ if round(float(answer5)) == round(x * y / 100):
     print("Correct! Awesome, " + input_name + "!")
     mathscore += 1
     print("Your final score is: " + str(mathscore))
+    print("-" * 30)
 else:
     print("Oops! The correct answer is " + str(x * y / 100) + ". You're doing great, keep it up!")
     print("Your final score is: " + str(mathscore))
+    print("-" * 30)
 #This is the final question, where I used percentage calculation with random numbers between 1 and 100.
 print("Thanks for playing The Math Quiz, " + input_name + "! Your final score is: " + str(mathscore) + "/5")
 print("You got a " + str((mathscore/5)*100) + "% on the quiz!")
+print("-" * 30)
 
 #---------------------------------End of the math quiz--------------------------------------------
 #-----------------------------Start of Rock, Paper, Scissors--------------------------------------
 
 i = 0
-while i <= 5:
-    print("Now, let's play 5 rounds of Rock, Paper, Scissors! Type 'rock', 'paper', or 'scissors' to play.")
-    choices = ["rock", "paper", "scissors"]
-    while True:
-        user_choice = input("Your choice: ").lower()
-        if user_choice not in choices:
-            print("Invalid choice! Please choose 'rock', 'paper', or 'scissors'.")
-            continue
-    
-        computer_choice = random.choice(choices)
-        print("I chose:", computer_choice)
+rps_score = 0
+choices = ["rock", "paper", "scissors"]
 
-        if user_choice == computer_choice:
-            print("It's a tie!")
-        elif (user_choice == "rock" and computer_choice == "scissors") or \
-            (user_choice == "paper" and computer_choice == "rock") or \
-            (user_choice == "scissors" and computer_choice == "paper"):
-            print("You win!")
-        else:
-            print("You lose!")
+print("Now, let's play 5 rounds of Rock, Paper, Scissors! Type 'rock', 'paper', or 'scissors' to play.")
 
-        i += 1
-        if i >= 5:
-            print("Game over! You played 5 rounds.")
+while i < 5:
+    user_choice = input("Your choice: ").lower()
+
+    if user_choice not in choices:
+        print("Invalid choice! Please choose 'rock', 'paper', or 'scissors'.")
+        continue  # Don't count invalid input as a round
+
+    computer_choice = random.choice(choices)
+    print("I chose:", computer_choice)
+
+    if user_choice == computer_choice:
+        print("It's a tie!")
+    elif (user_choice == "rock" and computer_choice == "scissors") or \
+         (user_choice == "paper" and computer_choice == "rock") or \
+         (user_choice == "scissors" and computer_choice == "paper"):
+        print("You win!")
+        rps_score += 1
+    else:
+        print("You lose!")
+
+    i += 1
+    print("Your current score is:", rps_score)
+    print("-" * 30)
+
+print("You have played 5 rounds of Rock, Paper, Scissors.")
+print("Your final score is:", rps_score)
+if rps_score >= 3:
+    print("🎉 Congratulations! You won the game!")
+else:
+    print("😢 Better luck next time!")
             
 
 #---------------------------------End of Rock, Paper, Scissors--------------------------------------
